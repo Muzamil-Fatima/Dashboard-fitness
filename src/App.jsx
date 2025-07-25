@@ -4,7 +4,7 @@ import OverView from "./Pages/Dashboard/OverView";
 import Appointment from "./Pages/Appointment/Appointment";
 import Classes from "./Pages/Classes/Classes";
 import Services from "./Pages/Services/Services";
-import Client from "./Pages/Dashboard/Clients";
+// import Client from "./Pages/Dashboard/Clients";
 import Setting from "./Pages/Setting/Settings";
 import Profile from "./Pages/Setting/ProfileDetails";
 import Team from "./Pages/Setting/Team";
@@ -19,7 +19,7 @@ export default function App() {
       <div className="flex-1 ml-8">
         <Routes>
           <Route path="overview" element={<OverView />} />
-          <Route path="client" element={<Client />} />
+          {/* <Route path="client" element={<Client />} /> */}
           <Route path="appointment" element={<Appointment />} />
           <Route path="classes" element={<Classes />} />
           <Route path="services" element={<Services />} />

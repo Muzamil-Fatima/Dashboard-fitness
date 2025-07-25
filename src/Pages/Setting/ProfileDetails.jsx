@@ -1,7 +1,7 @@
 export default function ProfileDetails() {
   return (
     <div>
-      <h1>Profile Details</h1>
+      <h6 className="font-secondary font-bold text-[40px] mt-6">Profile Details</h6>
     </div>
   );
 }

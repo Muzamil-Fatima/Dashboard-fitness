@@ -9,7 +9,7 @@ export default function SideBar() {
           <img src={logo} alt="logo" className="w-[207px] h-[33px]" />
         </div>
         <ul className="font-secondary font-medium text-2xl">
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-4 mb-4">
+          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               viewBox="0 0 23 25"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ export default function SideBar() {
               Client
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-4 mb-4">
+          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               width="25"
               height="25"
@@ -104,7 +104,7 @@ export default function SideBar() {
               Classes
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-4 mb-4">
+          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               width="29"
               height="29"

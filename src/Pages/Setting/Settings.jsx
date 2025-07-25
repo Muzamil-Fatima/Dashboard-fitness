@@ -5,7 +5,7 @@ import arrow from "../../../Icons/arrow-up.svg";
 import team from "../../../Icons/team.svg";
 export default function Setting() {
   return (
-    <div className="">
+    <div>
       <h6 className="font-secondary font-bold text-[40px] mt-6">Settings</h6>
       <div className="flex m-4">
         <SettingWrapper

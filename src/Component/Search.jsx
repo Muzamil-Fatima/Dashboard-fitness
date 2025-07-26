@@ -1,10 +1,10 @@
 import search from "../../Icons/search.svg";
 export default function Search() {
   return (
-    <div className="flex justify-between mt-3">
+    <div className="flex justify-between mt-1">
       <input
         type="text"
-        className=" px-2 relative w-[300px] h-[50px] border-1 rounded-[15px] font-secondary font-medium text-[16px] opacity-50"
+        className=" px-2 relative w-[300px] h-[45px] border-1 rounded-[15px] font-secondary font-medium text-[16px] opacity-50"
         placeholder="Search"
        
       />

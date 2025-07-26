@@ -7,19 +7,30 @@ import group from "../../../Icons/group.svg";
 
 export default function Classes() {
   const [clients, setClients] = useState([]);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  const totalPages = Math.ceil(clients.length / rowsPerPage);
+
+  //   Data paginate
+  const paginatedClients = clients.slice(
+    (currentPage - 1) * rowsPerPage,
+    currentPage * rowsPerPage
+  );
+//  get data from api
   useEffect(() => {
     fetch("http://localhost:3000/clients")
       .then((response) => response.json())
       .then((data) => setClients(data))
       .catch((error) => console.error("Error fetching clients: ", error));
   }, []);
+
   return (
-    <div className="font-secondary font-medium text-[13px]">
-      <h2 className="font-bold text-[40px]  mt-4 ">Clients</h2>
+    <div className="font-secondary font-medium text-[13px] mr-4">
+      <h2 className="font-bold text-[40px]  mt-2 ">Clients</h2>
       <Search />
-      <div className="mt-2 mr-4 border-[1px] border-[var(--color-white)]/15 rounded-[15px] ">
-        <div className="flex py-3 px-2 items-center justify-between border-b-[1px] border-b-[var(--color-white)]/15">
+      <div className="mt-2  border-[1px] border-[var(--color-white)]/15 rounded-[15px] ">
+        <div className="flex py-2 px-2 items-center justify-between border-b-[1px] border-b-[var(--color-white)]/15">
           <div className="text-[16px]">All Clients</div>
           <div className="flex gap-3 items-center justify-end">
             <button className=" flex items-center justify-between px-2 w-[132px] h-[34px] rounded-[27px] bg-[var(--color-darker)] gap-1.5">
@@ -42,6 +53,10 @@ export default function Classes() {
                 <tr className="border-b-[1px] border-b-[var(--color-white)]/15">
                   <th className=" px-4 py-3">
                     <div className="flex items-center gap-1">
+                      <input
+                        type="checkbox"
+                        className="w-4 h-4 accent-[var(--color-primary)] border-[1px] border-[var(--color-primary)] rounded focus:ring-[var(--color-primary)]/20"
+                      />
                       ID
                       <img src={group} className="w-[8px] h-4" />
                     </div>
@@ -79,12 +94,21 @@ export default function Classes() {
                 </tr>
               </thead>
               <tbody>
-                {clients.map((client) => (
+                {paginatedClients.map((client, index) => (
                   <tr
                     key={client.id}
-                    className=" border-b-[1px] border-b-[var(--color-white)]/15 text-[13px] font-medium"
+                    className={`border-b-[1px] border-b-[var(--color-white)]/15 text-[13px] font-medium
+                    ${index % 2 !== 0 ? "bg-[var(--color-darker)]" : ""}
+                     `}
                   >
-                    <td className="px-4 py-3">{client.id}</td>
+                    <td className="px-4 py-3">
+                      {" "}
+                      <input
+                        type="checkbox"
+                        className="w-4 h-4 bg-transparent accent-[var(--color-primary)]/20 border-[1px] border-[var(--color-white)]/15 rounded focus:ring-[var(--color-primary)]/20"
+                      />{" "}
+                      {client.id}
+                    </td>
                     <td className="px-4 py-3 flex items-center gap-2 ">
                       <img
                         src={client.profile}
@@ -110,21 +134,56 @@ export default function Classes() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mt-6 mb-6 flex justify-between">
         <p>
-          1-10 <span>of 50</span>
+          {(currentPage - 1) * rowsPerPage + 1}-
+          {Math.min(currentPage * rowsPerPage, clients.length)} of{" "}
+          {clients.length}
         </p>
-        <p>
-          Row per Page:
-          <select name="" id="">
-            <option value="">10</option>
-            <option value="">20</option>
-            <option value="">50</option>
-          </select>
-        </p>
-        <div>
-          <img src={arrow} alt="" />
-          <img src={arrow} alt="" />
+        <div className="flex">
+          <p>
+            Row per Page:
+            <select
+              value={rowsPerPage}
+              onChange={(e) => {
+                setRowsPerPage(Number(e.target.value));
+                setCurrentPage(1);
+              }}
+              name=""
+              id=""
+              className="ml-1.5 bg-[var(--color-darker)] h-[26px] w-[42px] border-[1px] border-[var(--color-white)]/15 mr-6"
+            >
+              <option value={10}>10</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+            </select>
+          </p>
+          <div className="flex gap-1.5">
+            <img
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              src={arrow}
+              alt="previous"
+              className={`bg-[var(--color-darker)] h-[26] w-[26px] border-[1px] border-[var(--color-white)]/15 rotate-180
+                ${currentPage === 1 ? "opacity-30 cursor-not-allowed" : ""}
+                `}
+            />
+            <img
+              onClick={() =>
+                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+              }
+              disabled={currentPage === totalPages}
+              src={arrow}
+              alt="next"
+              className={`bg-[var(--color-darker)] h-[26] w-[26px] border-[1px] border-[var(--color-white)]/15 
+                ${
+                  currentPage === totalPages
+                    ? "opacity-30 cursor-not-allowed"
+                    : ""
+                }
+                `}
+            />
+          </div>
         </div>
       </div>
     </div>

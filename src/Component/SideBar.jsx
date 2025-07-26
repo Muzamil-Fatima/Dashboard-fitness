@@ -3,13 +3,13 @@ import logo from "../../Icons/logo.svg";
 
 export default function SideBar() {
   return (
-    <div className="flex w-[300px] h-screen flex-col justify-between">
+    <div className="flex w-[280px] h-screen flex-col justify-between">
       <div className="">
         <div className=" mt-6 ml-2 mb-4">
           <img src={logo} alt="logo" className="w-[207px] h-[33px]" />
         </div>
         <ul className="font-secondary font-medium text-2xl">
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               viewBox="0 0 23 25"
               xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export default function SideBar() {
             </NavLink>
           </li>
 
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
             <svg
               width="33"
               height="33"
@@ -51,7 +51,7 @@ export default function SideBar() {
               Client
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               width="25"
               height="25"
@@ -83,7 +83,7 @@ export default function SideBar() {
               Appointment
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
             <svg
               width="29"
               height="29"
@@ -104,7 +104,7 @@ export default function SideBar() {
               Classes
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mt-3 mb-3">
             <svg
               width="29"
               height="29"
@@ -122,7 +122,7 @@ export default function SideBar() {
               Services
             </NavLink>
           </li>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px]">
             <svg
               width="25"
               height="25"
@@ -152,7 +152,7 @@ export default function SideBar() {
       </div>
       <div>
         <ul>
-          <li className="w-[280px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mb-3">
+          <li className="w-[257px] pl-4 ml-3 text-white hover:text-[var(--color-primary)] hover:border-2 hover:border-dashed hover:border-[var(--color-primary)] h-[52px] flex items-center rounded-[8px] mb-3">
             <svg
               width="27"
               height="27"

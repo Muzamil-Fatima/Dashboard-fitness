@@ -20,9 +20,11 @@ export default function App() {
           path="/*"
           element={
             <div className="flex bg-[var(--color-dark)] h-screen text-[var(--color-white)]">
+              <div className="h-screen sticky top-0">
               <SideBar />
+              </div>
               <div className="h-screen w-px bg-gray-500 opacity-40"></div>
-              <div className="flex-1 ml-8">
+              <div className="flex-1 ml-8 overflow-y-auto min-h-screen">
                 <Routes>
                   <Route path="overview" element={<OverView />} />
                   <Route path="client" element={<Client />} />
@@ -34,8 +36,8 @@ export default function App() {
                   <Route path="setting/team-details" element={<Team />} />
                 </Routes>
                 {/* <div>
-          <SideIcon />
-        </div> */}
+                  <SideIcon />
+                </div> */}
               </div>
             </div>
           }

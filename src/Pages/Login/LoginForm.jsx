@@ -17,7 +17,7 @@ export default function LoginForm() {
           <div>
             <label htmlFor="">Password</label>
             <input
-              className="bg-[var(--color-white)] py-3 px-2 flex justify-center rounded-[6px] w-full mt-1 mb-2 text-[#BCBEC0] "
+              className="bg-[var(--color-white)] py-3 px-2 flex justify-center rounded-[6px] w-full mt-1 mb-2 text-[var(--color-darker)] placeholder-[#BCBEC0] "
               placeholder="Password"
               type="password"
             />

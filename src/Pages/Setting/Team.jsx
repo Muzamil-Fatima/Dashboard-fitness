@@ -1,19 +1,31 @@
+import { useState } from "react";
 import Search from "../../Component/Search";
 import group from "../../../Icons/group.svg";
 import add from "../../../Icons/add.svg";
+import TeamModel from "./TeamModel";
 //  ${index % 2 !== 0 ? "bg-[var(--color-darker)]" : ""}
 
 export default function Team() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <h6 className="font-secondary font-bold text-[40px] mt-6">
         Team Management
       </h6>
-      <Search />
-      <button className="w-[193px] h-[55px] rounded-[15px] bg-[var(--color-primary)] flex justify-center items-center">
-        <img src={add} className="h-6 w-6"/> <span className="text-[16px] ml-1.5">Add Member</span>
-      </button>
-      <div className="mt-2  border-[1px] border-[var(--color-white)]/15 rounded-[15px] w-3/4 ">
+      <div className="flex justify-between mr-8 mt-6 items-center">
+        <Search />
+        <div className="relative">
+          <button
+            onClick={() => setOpen(true)}
+            className="w-[193px] h-[55px] rounded-[15px] bg-[var(--color-primary)] flex justify-center items-center"
+          >
+            <img src={add} className="h-6 w-6" />{" "}
+            <span className="text-[16px] ml-1.5">Add Member</span>
+          </button>
+          {open && <TeamModel isOpen={open} onClose={() => setOpen(false)} />}
+        </div>
+      </div>
+      <div className="mt-12 border-[1px] border-[var(--color-white)]/15 rounded-[15px] w-3/4 ">
         <div className="text-[16px] flex py-5 px-2 items-center border-b-[1px] border-b-[var(--color-white)]/15">
           Team
         </div>

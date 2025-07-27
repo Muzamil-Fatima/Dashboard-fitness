@@ -20,7 +20,7 @@ export default function DropDown() {
   return (
     <div className="font-medium text-xl flex gap-2 font-secondary">
       <div>
-        <div className="dropdown w-[370px] h-[55px] rounded-xl bg-[var(--color-darker)] flex justify-between items-center px-4">
+        <div className="dropdown w-[311px] h-[55px] rounded-xl bg-[var(--color-darker)] flex justify-between items-center px-4">
           {selected}
           <img
             className={` w-6 h-6 cursor-pointer transition-transform duration-300 ${
@@ -32,11 +32,11 @@ export default function DropDown() {
           />
         </div>
         {isOpen1 && (
-          <div className="mt-3 rounded-2xl">
+          <div className="absolute mt-3 rounded-2xl">
             {options.map((option, index) => {
               return (
                 <div
-                  className=" dropdown bg-[var(--color-darker)] w-[370px] px-4 py-3 hover:border-[var(--color-primary)] hover:border-2  border-dashed hover:rounded-2xl cursor-pointer"
+                  className="dropdown bg-[var(--color-darker)] w-[311px] px-4 py-3 hover:border-[var(--color-primary)] hover:border-2  border-dashed hover:rounded-2xl cursor-pointer"
                   key={index}
                   onClick={() => {
                     setSelected(option);

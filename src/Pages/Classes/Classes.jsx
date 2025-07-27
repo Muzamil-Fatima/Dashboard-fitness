@@ -20,7 +20,7 @@ export default function Classes() {
       <h2 className="font-bold text-[40px]  mt-2 ">Appointments</h2>
       <div>
         <Search />
-        <button className="w-[124px] h-[55px] rounded-[15px] bg-[var(--color-primary)] flex justify-center items-center">
+        <button className="w-[218px] h-[55px] rounded-[15px] bg-[var(--color-primary)] flex justify-center items-center">
           <img src={add} className="h-6 w-6" />{" "}
           <span className="text-[16px] ml-1.5">Add New Class</span>
         </button>
@@ -56,13 +56,13 @@ export default function Classes() {
                   </th>
                   <th className=" px-4 py-3">
                     <div className="flex items-center gap-1">
-                     Class Name
+                      Class Name
                       <img src={group} className="w-[8px] h-4" />
                     </div>
                   </th>
                   <th className=" px-4 py-3">
                     <div className="flex items-center gap-1">
-                     Description
+                      Description
                       <img src={group} className="w-[8px] h-4" />
                     </div>
                   </th>
@@ -74,7 +74,7 @@ export default function Classes() {
                   </th>
                   <th className=" px-4 py-3">
                     <div className="flex items-center gap-1">
-                     Status
+                      Status
                       <img src={group} className="w-[8px] h-4" />
                     </div>
                   </th>

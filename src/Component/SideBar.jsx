@@ -1,7 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../Icons/logo.svg";
 
 export default function SideBar() {
+  const navigate = useNavigate();
+  function handelLogout() {
+    navigate("/login");
+  }
   return (
     <div className="flex w-[280px] h-screen flex-col justify-between">
       <div className="">
@@ -169,10 +173,9 @@ export default function SideBar() {
                 fill="currentcolor"
               />
             </svg>
-
-            <NavLink to="/logout" className="ml-2  ">
+            <button onClick={handelLogout} to="/login" className="ml-2  ">
               Logout
-            </NavLink>
+            </button>
           </li>
         </ul>
       </div>

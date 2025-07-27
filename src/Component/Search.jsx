@@ -1,15 +1,18 @@
 import search from "../../Icons/search.svg";
-export default function Search() {
+
+export default function Search({ searchPlace = "Search" }) {
   return (
-    <div className="flex justify-between mt-1">
+    <div className="relative mt-1 w-[300px]">
       <input
         type="text"
-        className=" px-2 relative w-[300px] h-[45px] border-1 rounded-[15px] font-secondary font-medium text-[16px] opacity-50"
-        placeholder="Search"
-       
+        className="pr-10 pl-3 w-full h-[45px] border rounded-[15px] font-secondary font-medium text-[16px] opacity-50"
+        placeholder={searchPlace}
       />
-        <img src={search} alt="" className="absolute left-143 mt-3.5 w-6 h-6 flex justify-center items-center" />
-     
+      <img
+        src={search}
+        alt="search icon"
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 pointer-events-none"
+      />
     </div>
   );
 }
